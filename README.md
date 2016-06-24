@@ -1,4 +1,4 @@
-# Sample Webpack Environment
+# React Redux Starter Kit
 By: Robby Emmert
 
 ### Dependencies  
@@ -13,3 +13,8 @@ If you don't have Node JS, you'll need it for this tutorial.  I suggest installi
 4. Type `npm install` to install all of the Node JS dependencies for the project (see a list below).
 5. Type `npm install -g webpack webpack-dev-server` to install Webpack for yourself.
 6. Type `npm start` to start the Webpack Dev Server.  Your project is running (with live-reloading code) at http://localhost:8080.  As soon as you save a file, it should re-load in real time in your browser.
+
+### Guides
+- [Add a new Page](docs/guides/add-a-new-page.md).
+- [Add a new custom component](docs/guides/custom-components.md).
+- [Where to put styles](docs/guides/styles.md).
