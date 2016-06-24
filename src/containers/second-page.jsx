@@ -1,7 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { AdvancedComponent } from '../components';
+import { RouteActions } from '../actions';
+import { routes } from '../constants';
 
 class SecondPage extends React.Component {
+    componentWillMount(){
+        this.props.dispatch(RouteActions.setAppRoute(routes.SECOND_PAGE));
+    }
+
     render () {
         return (
             <div id="container-second-page">
@@ -14,4 +21,10 @@ class SecondPage extends React.Component {
     }
 }
 
-export default SecondPage;
+function select(state) {
+    return {
+        currentRoute: state.currentRoute
+    }
+}
+
+export default connect(select)(SecondPage);

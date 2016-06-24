@@ -6,7 +6,7 @@ import { routes } from '../constants';
 
 class HomePage extends React.Component {
     componentWillMount(){
-        RouteActions.setAppRoute(routes.HOME);
+        this.props.dispatch(RouteActions.setAppRoute(routes.HOME));
     }
 
     render () {
