@@ -6,7 +6,7 @@ By: Robby Emmert
 1. **Add a file to the `src/containers` folder**  
 ***TLDR:*** In this project, pages are called "containers", since they are compositions of other components (coincidentally, a "container" is often wrapped in a bootstrap "container" class div).  
 2. **Add a boilerplate ReactJS component class to your page's file**  
-***TLDR:*** See [DefaultPage](../../src/containers/default-container.jsx) for some ideas.
+***TLDR:*** See [DefaultPage](../../src/containers/default-page.jsx) for some ideas.
 3. **Import your file in `src/containers/index.js`, then add it to the exports list.**  
 ***TLDR:*** `import MyNewPage from './my-new-page.jsx'`  
 Then add your class to the export list.
