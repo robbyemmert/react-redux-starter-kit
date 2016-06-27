@@ -1,5 +1,5 @@
 # Custom Components  
-**How to build your own HTML elements with JSX and react**  
+**How to build your own Web elements with JSX and react**  
 
 By: Robby Emmert
 
