@@ -17,4 +17,4 @@ If you don't have Node JS, you'll need it for this tutorial.  I suggest installi
 ### Guides
 - [Add a new Page](docs/guides/add-a-new-page.md).
 - [Add a new custom component](docs/guides/custom-components.md).
-- [Where to put styles](docs/guides/styles.md).
+- [Style convention & docs](docs/guides/styles.md).
