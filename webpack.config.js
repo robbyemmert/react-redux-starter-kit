@@ -51,6 +51,9 @@ var devConfig = {
 	postcss: [
 		autoprefixer({ browsers: ['last 3 versions'] })	// Automatically adds vendor prefixes for x browser versions (and all vendors). :D
 	],
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     plugins: [
         // HtmlWebpackPlugin is what Automatically injects your styles and javascript into your index.html file.
         new HtmlWebpackPlugin({
@@ -114,6 +117,9 @@ var buildConfig = {
 	postcss: [
 		autoprefixer({ browsers: ['last 3 versions'] })	// Automatically adds vendor prefixes for x browser versions (and all vendors). :D
 	],
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     plugins: [
         // HtmlWebpackPlugin is what Automatically injects your styles and javascript into your index.html file.
         new HtmlWebpackPlugin({
