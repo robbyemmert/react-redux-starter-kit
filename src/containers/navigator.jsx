@@ -6,6 +6,7 @@ class Navigator extends React.Component {
         return (
             <div className="app" id="container-navigator">
                 <Header />
+                { this.props.page }
                 { this.props.children }
                 <Footer />
             </div>
