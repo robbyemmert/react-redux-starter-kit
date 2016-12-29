@@ -14,11 +14,27 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 import { routes } from './constants';
+import { RouteActions } from './actions';
 import {
     Navigator,
     HomePage,
     SecondPage
 } from './containers';
+
+// Scroll to top automatically when navigating, except when going back.
+let history = browserHistory;
+history.listen(location => {
+
+    //Keep redux and react router in sync;
+    store.dispatch(RouteActions.setAppRoute(location.pathname));
+
+    setTimeout(() => {
+        if (location.action === 'POP') {
+            return;
+        }
+        window.scrollTo(0, 0);
+    });
+});
 
 render((
     <Provider store={store}>

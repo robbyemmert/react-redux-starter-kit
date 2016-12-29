@@ -1,14 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { DefaultComponent } from '../components';
-import { RouteActions } from '../actions';
-import { routes } from '../constants';
 
 class HomePage extends React.Component {
-    componentWillMount(){
-        this.props.dispatch(RouteActions.setAppRoute(routes.HOME));
-    }
-
     render () {
         return (
             <div id="container-home-page">
