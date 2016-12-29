@@ -36,6 +36,10 @@ history.listen(location => {
     });
 });
 
+if (process.env.NODE_ENV === 'development') {
+    window.appHistory = history;
+}
+
 render((
     <Provider store={store}>
         <Router history={browserHistory}>
