@@ -1,14 +1,16 @@
 import React from 'react';
-import { Header, Footer } from '../components';
 
 class Navigator extends React.Component {
     render () {
+        const header = this.props.header || null;
+        const footer = this.props.footer || null;
+
         return (
             <div className="app" id="container-navigator">
-                <Header />
+                { header }
                 { this.props.page }
                 { this.props.children }
-                <Footer />
+                { footer }
             </div>
         )
     }

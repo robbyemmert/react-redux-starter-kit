@@ -21,7 +21,8 @@ import {
     SecondPage
 } from './containers';
 import {
-    defaultLayout
+    defaultLayout,
+    customLayout
 } from './layouts';
 
 // Scroll to top automatically when navigating, except when going back.
@@ -49,6 +50,7 @@ render((
             <Route path={routes.HOME} component={Navigator}>
                 <IndexRoute components={defaultLayout(HomePage)} />
                 <Route path={routes.SECOND_PAGE} components={defaultLayout(SecondPage)} />
+                <Route path="/landing" components={customLayout(SecondPage)} />
             </Route>
         </Router>
     </Provider>
