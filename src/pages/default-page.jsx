@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
  * Page Component
  * ---------------
  * 
- * Pages are really just components made up of layouts and other components.
+ * Pages are really just components made up of layouts and other components.  Copy this component and rename it to create a new page.
  */
 class DefaultPage extends React.Component {
 
@@ -22,7 +22,7 @@ class DefaultPage extends React.Component {
  * Redux select
  * ----------------
  * 
- * This is where you get variables out of the Redux Store
+ * This is where you get variables out of the Redux Store.  Access any of the variables returned below with this.props[variableName].  For example: this.props.currentRoute.
  */
 function select(state){
     return {

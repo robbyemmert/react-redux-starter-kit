@@ -49,6 +49,10 @@ if (process.env.NODE_ENV === 'development') {
     window.appHistory = history;
 }
 
+/**
+ * Routing:
+ * Below, you'll see the page higherarchy of your app. Add <Route /> components to import pages into your app.  A <Route /> component binds a page component to a URL.
+ */
 render((
     <Provider store={store}>
         <Router history={browserHistory}>
