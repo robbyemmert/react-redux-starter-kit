@@ -15,11 +15,16 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { routes } from './constants';
 import { RouteActions } from './actions';
+
 import {
-    Navigator,
     HomePage,
     SecondPage
-} from './containers';
+} from './pages';
+
+import {
+    Navigator
+} from './components';
+
 import {
     defaultLayout,
     customLayout

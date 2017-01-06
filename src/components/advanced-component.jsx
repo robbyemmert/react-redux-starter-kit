@@ -23,7 +23,7 @@ class AdvancedComponent extends React.Component {
         );
 
         return (
-            <div {...this.props} className={['component-default-component', this.props.className].join(' ')}>
+            <div id={this.props.id} className={['component-default-component', this.props.className].join(' ')}>
                 {/* inject any javascript variable with { variableName }.  this.props contains variables from this component's tag attributes, i.e. <MyTag someProp="myvalue" /> */}
                 <h1>{this.props.text}</h1>
                 <p>{ someVar }</p>
