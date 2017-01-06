@@ -15,11 +15,16 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { routes } from './constants';
 import { RouteActions } from './actions';
+
 import {
-    Navigator,
     HomePage,
     SecondPage
-} from './containers';
+} from './pages';
+
+import {
+    Navigator
+} from './components';
+
 import {
     defaultLayout,
     customLayout
@@ -44,6 +49,10 @@ if (process.env.NODE_ENV === 'development') {
     window.appHistory = history;
 }
 
+/**
+ * Routing:
+ * Below, you'll see the page higherarchy of your app. Add <Route /> components to import pages into your app.  A <Route /> component binds a page component to a URL.
+ */
 render((
     <Provider store={store}>
         <Router history={browserHistory}>

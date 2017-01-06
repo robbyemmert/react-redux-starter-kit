@@ -61,7 +61,7 @@ Develop mobile styles first, then tablet, then desktop.  Most of our audience is
 ### Container Styles
 1. Each container should be wrapped in an element with an *id* of something like `container-my-page`.  
 2. Each container should in general have it's own file.
-3. Container style files are stored in `/etc/styles/containers`, and named something like `my-container.scss`.
+3. Container style files are stored in `/etc/styles/pages`, and named something like `my-container.scss`.
 4. Make sure your container files are referenced in the list of container imports in `/etc/styles/base.scss`, so that Webpack can find them.
 
 ### Component Styles

@@ -6,6 +6,7 @@ Although it may seem useless to experienced developers, it's a great boilerplate
  */
 class AdvancedComponent extends React.Component {
     //You can add convenience methods that return values, or JSX to inject into your template below, in the render function.
+
     getAValue(value){
         return value + 5;
     }
@@ -22,8 +23,11 @@ class AdvancedComponent extends React.Component {
             <div>Some JSX</div>
         );
 
+        /**
+         * The 'render' function always returns your component's markup.  Keep in mind that your render function may be called several times per second, depending on the lifecycle of your app.  Process intensive actions (such as network requests or altering state) should never happen in the render funciton.
+         */
         return (
-            <div {...this.props} className={['component-default-component', this.props.className].join(' ')}>
+            <div id={this.props.id} className={['component-default-component', this.props.className].join(' ')}>
                 {/* inject any javascript variable with { variableName }.  this.props contains variables from this component's tag attributes, i.e. <MyTag someProp="myvalue" /> */}
                 <h1>{this.props.text}</h1>
                 <p>{ someVar }</p>
