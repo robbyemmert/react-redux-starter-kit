@@ -19,7 +19,7 @@ import { RouteActions } from './actions';
 import {
     HomePage,
     SecondPage
-} from './pages';
+} from './containers';
 
 import {
     Navigator
