@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import { currentRoute } from './current-route';
+import { currentRoute } from './route.reducer';
 
 const rootReducer = combineReducers({
     currentRoute

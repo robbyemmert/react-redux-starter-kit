@@ -1,4 +1,4 @@
-import RouteActions from './route-actions';
+import RouteActions from './route.actions';
 
 export {
     RouteActions

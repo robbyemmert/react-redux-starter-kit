@@ -1,7 +1,7 @@
-import reduxActions from './redux-actions';
+import actionTypes from './actiontypes';
 import routes from './routes';
 
 export {
-    reduxActions,
+    actionTypes,
     routes
 }
