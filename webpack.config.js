@@ -9,7 +9,7 @@ var lifecycleEvent = process.env.npm_lifecycle_event;
 
 // Change these defaults as needed
 var envDefaults = {
-    API_HOST: 'localhost'
+    API_HOST: 'https://jsonplaceholder.typicode.com'
 }
 
 require('dotenv').config({
