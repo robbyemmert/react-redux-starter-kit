@@ -7,6 +7,11 @@ var autoprefixer = require('autoprefixer');
 var cssExtractor = new ExtractTextWebpackPlugin('styles/[name].css');
 var lifecycleEvent = process.env.npm_lifecycle_event;
 
+// Change these defaults as needed
+var envDefaults = {
+    API_HOST: 'localhost'
+}
+
 require('dotenv').config({
     silent: true
 });
@@ -73,7 +78,7 @@ var devConfig = {
         proxy: {
             // Proxy the url /api to an external API.  This way you don't have to install the server on your computer and can get coding faster.
             '/api': {
-                target: process.env.API_HOST || 'localhost',
+                target: process.env.API_HOST || envDefaults.API_HOST,
                 xfwd: true,
                 changeOrigin: true
             }
@@ -148,7 +153,7 @@ var buildConfig = {
         proxy: {
             // Proxy the url /api to an external API.  This way you don't have to install the server on your computer and can get coding faster.
             '/api': {
-                target: process.env.API_HOST || 'localhost',
+                target: process.env.API_HOST || envDefaults.API_HOST,
                 xfwd: true,
                 changeOrigin: true
             }
