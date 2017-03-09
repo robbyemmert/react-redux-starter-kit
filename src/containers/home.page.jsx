@@ -21,8 +21,8 @@ class HomePage extends React.Component {
             <div id="container-home-page">
                 <h1>Home</h1>
                 <p>Here's a sample implementation of redux-segment</p>
-                <SampleSegment />
-                <SampleSegment />
+                <SampleSegment subscriberID="sample1" />
+                <SampleSegment subscriberID="sample2" />
                 <SampleSegment />
                 <p>Here's a list of demo posts from a sample API</p>
                 { posts }

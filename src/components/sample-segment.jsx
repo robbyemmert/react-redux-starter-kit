@@ -10,9 +10,9 @@ const actions = {
 const Counter = props => {
     return (
         <div className="sample-segment">
-            <button onClick={() => props.increment()}>+</button>
-            <span className="count">{props.count}</span>
             <button onClick={() => props.decrement()}>-</button>
+            <span className="count">{props.count}</span>
+            <button onClick={() => props.increment()}>+</button>
         </div>
     )
 }
