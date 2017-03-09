@@ -7,7 +7,8 @@ import {
 } from '../services';
 
 function* postsList() {
-    let posts = yield SampleService.postList.request().then(res => res.json());
+    let postsResponse = yield SampleService.postList.request();
+    let posts = yield postsResponse.json();
     yield put(SampleActions.setPosts(posts));
 }
 

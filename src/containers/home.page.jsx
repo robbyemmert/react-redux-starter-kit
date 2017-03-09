@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { SampleActions } from '../actions';
+import { SampleSegment } from '../components';
 
 class HomePage extends React.Component {
     componentWillMount() {
@@ -19,6 +20,10 @@ class HomePage extends React.Component {
         return (
             <div id="container-home-page">
                 <h1>Home</h1>
+                <p>Here's a sample implementation of redux-segment</p>
+                <SampleSegment />
+                <SampleSegment />
+                <SampleSegment />
                 <p>Here's a list of demo posts from a sample API</p>
                 { posts }
             </div>

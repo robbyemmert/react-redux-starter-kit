@@ -20,6 +20,8 @@ function customResolver(url, method, data, options) {
         settings.data, 
         settings.options
     )
+
+    // TODO: add a more robust parser here.  Detect content type and automatically parse it.
 }
 
 var api = new Api({
