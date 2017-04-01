@@ -1,6 +1,6 @@
 import { Api } from 'api-map';
-import baseResolver from 'api-map-fetch-resolver';
 import store from '../store';
+import { makeRequest } from './requester';
 
 // reduxifying the base resolver.
 // this should really be built into a re-usable library
@@ -14,7 +14,7 @@ function customResolver(url, method, data, options) {
         options: Object.assign({}, reduxApiSettings.options, options)
     });
 
-    return baseResolver(
+    return makeRequest(
         settings.url, 
         settings.method, 
         settings.data, 

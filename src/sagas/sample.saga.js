@@ -3,13 +3,18 @@ import { put, takeEvery } from 'redux-saga/effects';
 import { SampleActions } from '../actions';
 import { actionTypes } from '../constants';
 import {
-    SampleService
-} from '../services';
+    sampleEndpoints
+} from '../api';
 
 function* postsList() {
-    let postsResponse = yield SampleService.postList.request();
-    let posts = yield postsResponse.json();
-    yield put(SampleActions.setPosts(posts));
+    // let postsResponse = yield sampleEndpoints.postList.request();
+    // let posts = yield postsResponse.json();
+    let { success, error } = yield sampleEndpoints.postList.request();
+    if (success) {
+        yield put(SampleActions.setPosts(success));
+    } else {
+        console.error('there was a network error', error);
+    }
 }
 
 export function* getPostsList() {
