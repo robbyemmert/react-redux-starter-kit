@@ -11,6 +11,7 @@ import React from 'react'; // eslint-disable-line no-unused-vars
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
+import 'babel-polyfill'; // Babel Polyfill for Object.assign and generators
 
 import store from './store';
 import { routes } from './constants';
@@ -19,7 +20,7 @@ import { RouteActions } from './actions';
 import {
     HomePage,
     SecondPage
-} from './pages';
+} from './containers';
 
 import {
     Navigator
@@ -29,6 +30,9 @@ import {
     defaultLayout,
     customLayout
 } from './layouts';
+
+import {SampleService} from './services';
+window.serv = SampleService;
 
 // Scroll to top automatically when navigating, except when going back.
 let history = browserHistory;

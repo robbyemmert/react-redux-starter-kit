@@ -1,7 +1,9 @@
-import reduxActions from './redux-actions';
+import actionTypes from './actiontypes';
 import routes from './routes';
+import apiActionTypes from './api.actiontypes';
 
 export {
-    reduxActions,
-    routes
+    actionTypes,
+    routes,
+    apiActionTypes
 }
